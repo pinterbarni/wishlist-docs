@@ -24,10 +24,29 @@ Requires Python 3. (obv.)
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+### Preview the latest version
+
+```bash
 mkdocs serve
 ```
 
-The site is available at `http://127.0.0.1:8000` and reloads automatically when files change.
+Shows the site as it looks on **latest**: standard header, no banner.
+
+### Preview the dev version
+
+```bash
+DOCS_ENV=dev mkdocs serve
+```
+
+Shows the site as it looks on **dev**: orange header, `[DEV]` before the title and the development banner.
+
+In both cases the site is available at `http://127.0.0.1:8000` and reloads automatically when files change. Stop the server with `Ctrl+C`.
+
+### Preview both versions together
+
+clone the gh-pages branch.
 
 ## Contributing
 

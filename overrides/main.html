@@ -6,17 +6,15 @@
     <style>
       .md-header, .md-tabs { background-color: #ef6c00; }
       .md-header__topic:first-child .md-ellipsis::before { content: "[DEV] "; }
+      .md-banner { background-color: #fff3cd !important; }
+      .md-banner, .md-banner * { color: #5c3c00 !important; }
     </style>
   {% endif %}
 {% endblock %}
 
-{% block announce %}
-  {% if config.extra.docs_env == "live" %}
-    You're reading the <strong>live</strong> documentation{% if config.extra.release %} for Wishlist {{ config.extra.release }}{% endif %}.
-  {% endif %}
-{% endblock %}
-
-{% block outdated %}
-  You're viewing the <strong>development</strong> version of the docs{% if config.extra.release %} for the upcoming Wishlist {{ config.extra.release }}{% endif %}.
-  <a href="{{ '../' ~ base_url }}">Go to the live docs.</a>
-{% endblock %}
+{% block announce -%}
+  {%- if config.extra.docs_env == "dev" -%}
+    You're viewing the <strong>development</strong> version of the docs{% if config.extra.release %} for the upcoming Wishlist {{ config.extra.release }}{% endif %}.
+    <a href="{{ '../' ~ base_url }}">Go to the live docs.</a>
+  {%- endif -%}
+{%- endblock %}

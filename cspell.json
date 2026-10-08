@@ -2,7 +2,6 @@
   "version": "0.2",
   "language": "en",
   "words": [
-    "asda",
     "Drizzle",
     "gitflow",
     "mkdocs",
@@ -11,7 +10,9 @@
     "shadcn",
     "superfences",
     "venv",
-    "Zensical"
+    "Zensical",
+    "pinterbarni",
+    "fontawesome"
   ],
   "ignorePaths": [".venv/**", "site/**", "overrides/**"]
 }

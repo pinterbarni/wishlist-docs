@@ -1,5 +1,6 @@
 site_name: Wishlist Docs
 repo_url: https://github.com/pinterbarni/wishlist-docs
+copyright: Created by <a href="https://github.com/pinterbarni">pinterbarni</a>
 
 theme:
   name: material
@@ -12,6 +13,7 @@ theme:
     - navigation.indexes
     - toc.follow
     - search.suggest
+    - announce.dismiss
 
 markdown_extensions:
   - admonition
@@ -29,6 +31,10 @@ markdown_extensions:
 
 extra:
   docs_env: !ENV [DOCS_ENV, local]
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/pinterbarni
   version:
     provider: mike
     default: latest
