@@ -1,0 +1,65 @@
+site_name: Wishlist Docs
+repo_url: https://github.com/pinterbarni/wishlist-docs
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    primary: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format #pardoned in settings.json :D
+
+
+extra:
+  docs_env: !ENV [DOCS_ENV, local]
+  version:
+    provider: mike
+    default: latest
+
+nav:
+  - Product:
+      - Vision: product/vision.md
+      - Glossary: product/glossary.md
+  - ASDs:
+      - Overview: asd/index.md
+  # - 001 - Auth & SSO: asd/001-auth-sso.md
+  # - Architecture:
+  #     - Overview: architecture/index.md
+  #     - Data model: architecture/data-model.md
+  #     - Authentication: architecture/auth.md
+  #     - Internationalization: architecture/i18n.md
+  - ADRs:
+      - Overview: adr/index.md
+      - 0001 - Documentation approach: adr/0001-documentation-approach.md
+  # - Operations:
+  # - Environments: operations/environments.md
+  # - Deployment: operations/deployment.md
+  # - Runbook: operations/runbook.md
+  # - Contributing:
+  # - Workflow: contributing/workflow.md
+  # - Writing docs: contributing/writing-docs.md
+  - Contributing:
+      - contributing/index.md
+      - Workflow: contributing/workflow.md
+      - Writing docs: contributing/writing-docs.md
+      - Templates:
+          - ASD: contributing/templates/asd.md
+          - ADR: contributing/templates/adr.md
+          - ADR - rapid: contributing/templates/adr-short.md

@@ -1,0 +1,17 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "asda",
+    "Drizzle",
+    "gitflow",
+    "mkdocs",
+    "NestJS",
+    "pymdownx",
+    "shadcn",
+    "superfences",
+    "venv",
+    "Zensical"
+  ],
+  "ignorePaths": [".venv/**", "site/**", "overrides/**"]
+}
